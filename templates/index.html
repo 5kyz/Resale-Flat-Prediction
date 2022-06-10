@@ -1,0 +1,96 @@
+<html>
+    <body>
+        <style type="text/css">
+            body {
+                background-image: url("background.jpeg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                text-align: left;
+                color: white;
+                text-shadow:2px 2px 6px black;
+            }
+        </style>
+        <h1>Singapore Resale Flat Price Calculator</h1>
+        <style type="text/css">
+            h1 {
+                text-align: left;
+                color: white;
+                font-family:'Gill Sans';
+            }
+        </style>
+        <form action = "/" method = "post"> 
+                <p><label for = "storey">Which storey range would you like to live on?</label>
+                    <select name = "storey" id = "storey">
+                    <option value = "1">01 TO 03</option>
+                    <option value = "2">04 TO 06</option>
+                    <option value = "3">07 TO 09</option>
+                    <option value = "4">10 TO 12</option>
+                    <option value = "5">13 TO 15</option>
+                    <option value = "6">16 TO 18</option>
+                    <option value = "7">19 TO 21</option>
+                    <option value = "8">22 TO 24</option>
+                    <option value = "9">25 TO 27</option>
+                    <option value = "10">28 TO 30</option>
+                    <option value = "11">31 TO 33</option>
+                    <option value = "12">34 TO 36</option>
+                    <option value = "13">37 TO 39</option>
+                    <option value = "14">40 TO 42</option>
+                    <option value = "15">43 TO 45</option>
+                    <option value = "16">46 TO 48</option>
+                    <option value = "17">49 TO 51</option>
+                    </select>
+                </p>
+            <p>How big would you like your house to be? (sq ft) </p>
+            <div><input type = "range" id = "area" name = "area" step = "1" min = "0" max ="300" oninput="rangeValue.innerText=this.value">
+                <label for = "area"> Sq Ft </label></div>
+                <p id="rangeValue">0</p>
+            <p>How many years of lease remaining would you like your flat to be? (0 to 99 years)</p>
+                <p><input type = "number" step = "1" name = "lease"></p>
+
+                <p>
+                <label for = "town">Which town would you like your house to be in?</label>
+                <select name = "town" id = "town">
+                <option value = "0">ANG MO KIO</option>
+                <option value = "1">BEDOK</option>
+                <option value = "2">BISHAN</option>
+                <option value = "3">BUKIT BATOK</option>
+                <option value = "4">BUKIT MERAH</option>
+                <option value = "5">BUKIT PANJANG</option>
+                <option value = "6">BUKIT TIMAH</option>
+                <option value = "7">CENTRAL AREA</option>
+                <option value = "8">CHOA CHU KANG</option>
+                <option value = "9">CLEMENTI</option>
+                <option value = "10">GEYLANG</option>
+                <option value = "11">HOUGANG</option>
+                <option value = "12">JURONG EAST</option>
+                <option value = "13">JURONG WEST</option>
+                <option value = "14">KALLANG/WHAMPOA</option>
+                <option value = "15">MARINE PARADE</option>
+                <option value = "16">PASIR RIS</option>
+                <option value = "17">PUNGGOL</option>
+                <option value = "18">QUEENSTOWN</option>
+                <option value = "19">SEMBAWANG</option>
+                <option value = "20">SENGKANG</option>
+                <option value = "21">SERANGOON</option>
+                <option value = "22">TAMPINES</option>
+                <option value = "23">TOA PAYOH</option>
+                <option value = "24">WOODLANDS</option>
+                <option value = "25">YISHUN</option>
+                </select>
+            </p>
+            <!-- <p>How many rooms would you like in your flat? </p>
+            <p><input type = "room" step = "1" name = "room"></p> -->
+
+            <p><input type = "submit" value = "Enter"></p>
+            <style type="text/css">
+                p {
+                    text-align: left;
+                    color: white;
+                    font-family:Calibri;
+                }
+            </style>
+        </form>
+        <pre>{{result}}</pre>
+    </body>
+</html>
