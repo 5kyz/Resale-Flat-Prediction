@@ -26,7 +26,7 @@ def index():
         pred = model.predict([[float(storey), float(area), float(lease), float(town)]])
         s = f""" You have entered the following details:
     Storey Code: {storey}
-    Floor Area: {area} sq ft
+    Floor Area: {area} sqm
     Number of Remaining Lease: {lease} years
     Town Code: {town}
 
